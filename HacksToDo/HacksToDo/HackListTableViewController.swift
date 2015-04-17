@@ -12,6 +12,17 @@ import UIKit
 
     var hackIdeas: NSMutableArray = []
     
+    @IBAction func unwindToList(segue: UIStoryboardSegue) {
+        
+        var source: AddToDoViewController = segue.sourceViewController as! AddToDoViewController
+        
+        if var item: HackIdea = source.hackIdea {
+            self.hackIdeas.addObject(item)
+            self.tableView.reloadData()
+        }
+        
+    }
+    
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         
         return 1
@@ -51,11 +62,27 @@ import UIKit
         var hackIdea: HackIdea = self.hackIdeas.objectAtIndex(indexPath.row) as! HackIdea
         
         cell.textLabel!.text = hackIdea.itemName as String
+        
+        if hackIdea.completed {
+            cell.accessoryType = .Checkmark
+        }
+        else {
+            cell.accessoryType = .None
+        }
 
         return cell
     }
     
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
 
+        tableView.deselectRowAtIndexPath(indexPath, animated: false)
+        var tappedItem: HackIdea = self.hackIdeas.objectAtIndex(indexPath.row) as! HackIdea
+        tappedItem.completed = !tappedItem.completed
+        
+        tableView.reloadData()
+        
+    }
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {

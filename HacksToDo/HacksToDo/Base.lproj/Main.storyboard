@@ -97,6 +97,10 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="doneButton" destination="RbU-kc-ah1" id="9f2-c7-Utw"/>
+                        <outlet property="textField" destination="YRB-ec-rKe" id="YiB-XV-noo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
                 <exit id="Tuo-Cq-jGz" userLabel="Exit" sceneMemberID="exit"/>
