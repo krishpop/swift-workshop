@@ -8,7 +8,7 @@
         <!--Hacks To-Do-->
         <scene sceneID="yow-NX-dHD">
             <objects>
-                <tableViewController id="Gor-4c-UDQ" sceneMemberID="viewController">
+                <tableViewController id="Gor-4c-UDQ" customClass="HackListTableViewController" customModule="HacksToDo" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="wR7-Rf-0xn">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -53,7 +53,7 @@
                     <navigationItem key="navigationItem" title="Hacks To-Do" id="Ml2-HD-mE8">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="VEH-Tg-Nme">
                             <connections>
-                                <segue destination="vXZ-lx-hvc" kind="showDetail" id="tcR-xC-sJu"/>
+                                <segue destination="1OL-s1-B2w" kind="showDetail" id="tcR-xC-sJu"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -62,7 +62,7 @@
             </objects>
             <point key="canvasLocation" x="444" y="389"/>
         </scene>
-        <!--Add To Do View Controller-->
+        <!--New Hack-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="AddToDoViewController" customModule="HacksToDo" customModuleProvider="target" sceneMemberID="viewController">
@@ -88,10 +88,14 @@
                             <constraint firstItem="YRB-ec-rKe" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="72" id="oTu-OT-2Bf"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="New Hack" id="9Ch-V4-Dbs">
+                        <barButtonItem key="leftBarButtonItem" title="Item" systemItem="cancel" id="KW3-Ak-vKx"/>
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="RbU-kc-ah1"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1152" y="389"/>
+            <point key="canvasLocation" x="1964" y="389"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="RnH-x4-9BQ">
@@ -110,6 +114,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aXx-np-HrO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-368" y="389"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="yoX-bz-DId">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1OL-s1-B2w" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ec3-6R-dLe">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="2eD-Ki-Vsr"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E3J-wh-IGm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1152" y="389"/>
         </scene>
     </scenes>
 </document>

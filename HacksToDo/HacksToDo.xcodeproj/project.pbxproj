@@ -13,6 +13,7 @@
 		031514881AE17E4A004C3817 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 031514871AE17E4A004C3817 /* Images.xcassets */; };
 		0315148B1AE17E4A004C3817 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 031514891AE17E4A004C3817 /* LaunchScreen.xib */; };
 		031514971AE17E4A004C3817 /* HacksToDoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031514961AE17E4A004C3817 /* HacksToDoTests.swift */; };
+		031514A11AE180FC004C3817 /* HackListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031514A01AE180FC004C3817 /* HackListTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		031514901AE17E4A004C3817 /* HacksToDoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HacksToDoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		031514951AE17E4A004C3817 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		031514961AE17E4A004C3817 /* HacksToDoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HacksToDoTests.swift; sourceTree = "<group>"; };
+		031514A01AE180FC004C3817 /* HackListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HackListTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 				031514801AE17E4A004C3817 /* AppDelegate.swift */,
 				031514821AE17E4A004C3817 /* AddToDoViewController.swift */,
 				031514841AE17E4A004C3817 /* Main.storyboard */,
+				031514A01AE180FC004C3817 /* HackListTableViewController.swift */,
 				031514871AE17E4A004C3817 /* Images.xcassets */,
 				031514891AE17E4A004C3817 /* LaunchScreen.xib */,
 				0315147E1AE17E4A004C3817 /* Supporting Files */,
@@ -214,6 +217,7 @@
 			files = (
 				031514831AE17E4A004C3817 /* AddToDoViewController.swift in Sources */,
 				031514811AE17E4A004C3817 /* AppDelegate.swift in Sources */,
+				031514A11AE180FC004C3817 /* HackListTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
