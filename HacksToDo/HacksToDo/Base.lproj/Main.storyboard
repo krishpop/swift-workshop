@@ -8,7 +8,7 @@
         <!--Hacks To-Do-->
         <scene sceneID="yow-NX-dHD">
             <objects>
-                <tableViewController id="Gor-4c-UDQ" customClass="HackListTableViewController" customModule="HacksToDo" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="Gor-4c-UDQ" customClass="HackListTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="wR7-Rf-0xn">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -89,11 +89,20 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="New Hack" id="9Ch-V4-Dbs">
-                        <barButtonItem key="leftBarButtonItem" title="Item" systemItem="cancel" id="KW3-Ak-vKx"/>
-                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="RbU-kc-ah1"/>
+                        <barButtonItem key="leftBarButtonItem" title="Item" systemItem="cancel" id="KW3-Ak-vKx">
+                            <connections>
+                                <segue destination="Tuo-Cq-jGz" kind="unwind" unwindAction="unwindToList:" id="T5L-Ia-eJc"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="RbU-kc-ah1">
+                            <connections>
+                                <segue destination="Tuo-Cq-jGz" kind="unwind" unwindAction="unwindToList:" id="n9L-ZP-gKl"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <exit id="Tuo-Cq-jGz" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1964" y="389"/>
         </scene>

@@ -8,8 +8,20 @@
 
 import UIKit
 
-class HackListTableViewController: UITableViewController {
+@objc(HackListTableViewController)class HackListTableViewController: UITableViewController {
 
+    var hackIdeas: NSMutableArray = []
+    
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return self.hackIdeas.count
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
